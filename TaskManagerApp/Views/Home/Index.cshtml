@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Task Manager";
+}
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to the Task Manager!</h1>
+        <p class="lead">This page is designed to help you manage your tasks efficiently. You can view and manage all your tasks from here.</p>
+        <hr class="my-4">
+        <p>We hope you will have a seamless and pleasant experience while managing your tasks.</p>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Task")" role="button">View Task Details</a>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Task")" role="button">Add New Task</a>
+    </div>
+</div>
+

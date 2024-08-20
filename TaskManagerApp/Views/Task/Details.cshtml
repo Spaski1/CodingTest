@@ -1,0 +1,20 @@
+﻿@model TaskManagerApp.Models.Entities.TaskEntity
+
+@{
+    ViewData["Title"] = "Task Details";
+}
+
+<div class="container mt-5">
+
+    <div class="card">
+        <div class="card-header">
+            Task Information
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text"><strong>Due Date:</strong> @Model.DueDate.ToShortDateString()</p>
+            <p class="card-text"><strong>Status:</strong> @Model.Status</p>
+            <a class="btn btn-primary" href="@Url.Action("Index", "Task")">Back to List</a>
+        </div>
+    </div>
+</div>

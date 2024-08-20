@@ -1,0 +1,25 @@
+﻿@using TaskManagerApp.Models.Enums
+@model TaskManagerApp.Models.Entities.TaskEntity
+
+<h2>Edit Task</h2>
+
+<form action="/Task/Edit/@Model.Id" method="post">
+@* <form asp-action="Edit" asp-route-id="@Model.Id" method="post"> *@
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="DueDate"></label>
+        <input asp-for="DueDate" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Status"></label>
+        <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<Status>()"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
